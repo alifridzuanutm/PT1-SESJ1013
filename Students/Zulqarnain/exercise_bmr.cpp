@@ -1,16 +1,17 @@
 #include <iostream>
-#include <cmath>
+
+using namespace std;
+
+void activitieslevel(double BMR);
 
 int main(){
 
-    using namespace std;
-
     int A;//declare variables
-    double H,W,BMR,a,b,c,d,e,f;
+    double H,W,BMR;
     char g;
 
     do{//enter age until valid
-        cout<<"Enter your age: ";
+        cout<<"\nEnter your age: ";
         cin>>A;
         if (A<=14 || A>=81){
             cout<<"Please provide an age between 15 and 80\n";
@@ -30,6 +31,15 @@ int main(){
 
     cout<<"\n\nRESULT\nBMR = "<<BMR<<" Calories/day";
 
+    activitieslevel(BMR);
+
+    return 0;
+}
+
+void activitieslevel(double BMR){
+
+    double a,b,c,d,e,f;
+
     a=1.2*BMR;b=1.37*BMR;c=1.46*BMR,d=1.55*BMR;e=1.72*BMR;f=1.9*BMR;
 
     cout<<"\n\nDaily calorie needs based on activity level   Activity Level Calorie\nSedentary: little or no exercise: "<<a<<" Calories";//tables
@@ -40,5 +50,4 @@ int main(){
     cout<<"\nVery intense exercise daily, or physical job: "<<f<<" Calories";
     cout<<"\nExercise: 15-30 minutes of elevated heart rate activity.\nIntense exercise: 45-120 minutes of elevated heart rate activity.\nVery intense exercise: 2+ hours of elevated heart rate activity.";
 
-    return 0;
 }
