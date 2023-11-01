@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double weight, height, age, bmr;
+    char gender;
+
+    cout << "Enter weight in kilograms: ";
+    cin >> weight;
+
+    cout << "Enter height in centimeters: ";
+    cin >> height;
+
+    cout << "Enter age in years: ";
+    cin >> age;
+
+    cout << "Select gender (M/F): ";
+    cin >> gender;
+    
+    if (gender == 'M' || gender == 'm') {
+        bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);  // i used different numbers because the one in my flowchart werent that good, i used Revised Harris-Benedict Equation//
+    } else if (gender == 'F' || gender == 'f') {
+        bmr = 16.10 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+    } else {
+        cout << "Invalid gender selection." << endl;
+        return 1;  // if the users input is not m or f then the msg that will show up is "invalid gender selection" and the user has to redo the process //
+    }
+
+    cout << "Your Basal Metabolic Rate (BMR) is: " << bmr << " calories per day." << endl;
+
+    return 0;  // Exit normally //
+    
+}
+
+
+
+
