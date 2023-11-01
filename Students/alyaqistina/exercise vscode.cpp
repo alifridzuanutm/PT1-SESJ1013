@@ -13,6 +13,6 @@ int main(){
     cout << "Enter a single character: ";
     cin >> aph1;
     cout << "Enter an array of character: ";
-    cin >> aph2;
+    cin >> aph2
     return 0;
 }
