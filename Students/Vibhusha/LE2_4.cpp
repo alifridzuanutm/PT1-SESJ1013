@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-//Set1
+//Set4
 int main() {
     int number, multiply=1;
     cout << "Enter an integer number: ";

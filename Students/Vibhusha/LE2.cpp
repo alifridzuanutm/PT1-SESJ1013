@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-//Set2
+//Set1
 int main() {
     int number, sum=0;
     cout << "Enter an integer number: ";
