@@ -38,7 +38,7 @@ int main() {
     }else if( sum % 5 == 0){
         cout << sum << " is " <<sumValue<< " &  multiples of 5.";
     }else{
-        cout<< sum <<" is not multiples of 3, 4, and 5";
+        cout<< sum <<" is " <<sumValue<< " & not multiples of 3, 4, and 5";
     }
     return 0;
 }
