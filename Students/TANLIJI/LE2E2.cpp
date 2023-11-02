@@ -35,7 +35,7 @@ int main(){
         cout<<sum << " is odd number & multiples of 5";
     }
     else if(sum%2!=0){
-        cout<<sum << " an odd number";
+        cout<<sum << " is odd number";
     }
     
     return 0;

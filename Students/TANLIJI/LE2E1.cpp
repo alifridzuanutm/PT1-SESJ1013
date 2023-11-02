@@ -32,7 +32,7 @@ int main(){
         cout<<sum << " is multiples of 4 and 5";
     }
     else if(sum%3==0){
-        cout<<sum << " is multiples of 3";
+        cout<<sum << " is multiples of 3 ";
     }
     else if(sum%4==0){
         cout<<sum << " is multiples of 4";

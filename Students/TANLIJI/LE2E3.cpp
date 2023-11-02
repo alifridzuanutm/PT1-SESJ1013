@@ -41,7 +41,7 @@ int main(){
         cout<<mul << " is multiples of 7";
     }
     else{
-        cout<<mul<<" is no multiples of 4,5 and 7";
+        cout<<mul<<" is no multiples of 4,5 and 7" ;
     }
     return 0;
 

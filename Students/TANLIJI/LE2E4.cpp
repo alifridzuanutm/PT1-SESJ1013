@@ -44,7 +44,7 @@ int main(){
         cout<<mul << " is odd number";
     }
     else if (mul%2==0){
-        cout<<mul << " is even number";
+        cout<<mul << " is even number" ;
     }
 
     
