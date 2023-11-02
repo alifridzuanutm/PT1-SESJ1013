@@ -15,9 +15,6 @@ int main()
     }while(digit!=0);
 
     cout<<"Sum = "<<sum<<endl;
-    if(sum%3==0){
-        cout<<"The "<<sum<<" is multiples of 3\n";
-    }
     if(sum%4==0){
         cout<<"The "<<sum<<" is multiples of 4\n";
     }
