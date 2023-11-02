@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     int number;
 
-    cout << "Enter an integer number: ";
+    cout << "Enter a positive integer number: ";
     cin >> number; // Asks the user to enter an integer from the user
 
     int sumOfDigits = 0;
