@@ -41,10 +41,6 @@ int main(){
     else if(total%5==0){
         cout<<"\n"<<total << " is multiples of 5";
     }
-    else{
-        cout<<"\n"<<total<<" have no multiples";
-    }
-
 
     return 0;
 }
