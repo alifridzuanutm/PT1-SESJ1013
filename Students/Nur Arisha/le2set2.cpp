@@ -26,7 +26,7 @@ int main()
         cout << sum << " is an odd number & "; //for odd number
 
     //identify multiply of 4 and/or 5
-    cout << sum << " is a multiples of ";
+    cout << "is a multiples of ";
     if((sum%4==0) && (sum%5==0))
     {
         cout << "4 and 5";
