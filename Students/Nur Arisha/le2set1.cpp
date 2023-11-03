@@ -37,11 +37,11 @@ int main()
     {
         cout << "3 and 5";
     }
-     else if(sum3==0)
+     else if(sum%3==0)
     {
         cout << "3";
     }
-    else if(prod%4==0)
+    else if(sum%4==0)
     {
         cout << "4";
     }
