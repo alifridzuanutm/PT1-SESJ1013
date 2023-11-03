@@ -37,6 +37,19 @@ int main()
     {
         cout << "3 and 5";
     }
+     else if(sum3==0)
+    {
+        cout << "3";
+    }
+    else if(prod%4==0)
+    {
+        cout << "4";
+    }
+    else{
+        cout << "5";
+    }
+
+    
     
 
     return 0;
