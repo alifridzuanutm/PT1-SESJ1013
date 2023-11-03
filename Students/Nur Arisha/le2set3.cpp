@@ -24,20 +24,32 @@ int main()
 
     if((prod%4==0) && (prod%5==0) && (prod%7==0))
     {
-        cout << "4, 5 and 7";
+        cout << "4, 5 and 7"; //4, 5 and 7
     }
     else if((prod%4==0) && (prod%5==0))
     {
-        cout << "4 and 5";
+        cout << "4 and 5"; 
     }
     else if((prod%5==0) && (prod%7==0))
     {
-        cout << "5 and 7";
+        cout << "5 and 7"; 
     }
     else if((prod%4==0) && (prod%7==0))
     {
         cout << "4 and 7";
     }
+    else if(prod%4==0)
+    {
+        cout << "4";
+    }
+    else if(prod%5==0)
+    {
+        cout << "5";
+    }
+    else{
+        cout << "7";
+    }
+
     
 
 
