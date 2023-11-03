@@ -3,22 +3,18 @@ using namespace std;
 
 int main(){
     int num, digit, product=1;
-    bool firstDigit = true;
 
     cout << "Enter an integer number: ";
     cin >> num;
 
-    do{
+    do {
         digit = num % 10;
         num /= 10;
-        product *= digit;
-
-        if (!firstDigit){
-            cout << " * ";
-        } else {
-            firstDigit = false;
-        }
         cout << digit;
+        if (num!=0){
+            cout << " * ";
+        } 
+        product *= digit;
     } while (num != 0);
 
     cout << " = " << product << endl;

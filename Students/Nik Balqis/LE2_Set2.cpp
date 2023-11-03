@@ -3,27 +3,23 @@ using namespace std;
 
 int main(){
     int num, digit, sum=0;
-    bool firstDigit = true;
-
+    
     cout << "Enter an integer number: ";
     cin >> num;
     
     do{
         digit = num % 10;
         num /= 10;
-        sum += digit;
-
-        if (!firstDigit){
-            cout << " + ";
-        } else {
-            firstDigit = false;
-        }
         cout << digit;
-    } while (num!=0); 
+        if (num!=0){
+            cout << " + ";
+        }
+        sum += digit;
+    } while (num!=0);  
 
     cout << " = " << sum << endl;
     cout << sum;
-    
+
     if (sum % 2 == 0){
         cout << " is even number";
         } else {

@@ -3,7 +3,6 @@ using namespace std;
 
 int main(){
     int num, digit, sum=0;
-    bool firstDigit = true;
 
     cout << "Enter an integer number: ";
     cin >> num;
@@ -11,14 +10,11 @@ int main(){
     do{
         digit = num % 10;
         num /= 10;
-        sum += digit;
-
-        if (!firstDigit){
-            cout << " + ";
-        } else {
-            firstDigit = false;
-        }
         cout << digit;
+        if (num!=0){
+            cout << " + ";
+        }
+        sum += digit;
     } while (num!=0);   
 
     cout << " = " << sum << endl;
