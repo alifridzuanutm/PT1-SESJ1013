@@ -20,10 +20,10 @@ int main()
     cout << " = " << sum << endl;
 
     //identify even number
-    if(sum%2==0)
+    if(sum%2==0) 
         cout << sum << " is an even number & ";
     else
-        cout << sum << " is an odd number & ";
+        cout << sum << " is an odd number & "; //for odd number
 
     //identify multiply of 4 and/or 5
     cout << sum << " is a multiples of ";
