@@ -20,41 +20,43 @@ int main()
 
 
    //identify multiples of 4, 5 and/or 7
-     cout << prod << " is a multiples of ";
-
     if((prod%4==0) && (prod%5==0) && (prod%7==0))
     {
-        cout << "4, 5 and 7"; //4, 5 and 7
+        cout << prod << " is a multiples of ";
+        cout << "4, 5 and 7";
     }
     else if((prod%4==0) && (prod%5==0))
     {
-        cout << "4 and 5"; 
+        cout << prod << " is a multiples of ";
+        cout << "4 and 5";
     }
     else if((prod%5==0) && (prod%7==0))
     {
-        cout << "5 and 7"; 
+        cout << prod << " is a multiples of ";
+        cout << "5 and 7";
     }
     else if((prod%4==0) && (prod%7==0))
     {
+        cout << prod << " is a multiples of ";
         cout << "4 and 7";
     }
     else if(prod%4==0)
     {
+        cout << prod << " is a multiples of ";
         cout << "4";
     }
     else if(prod%5==0)
     {
+        cout << prod << " is a multiples of ";
         cout << "5";
     }
     else{
+        cout << prod << " is a multiples of ";
         cout << "7";
     }
-
-    
-
 
 
     return 0;
 
-        
+
 }
