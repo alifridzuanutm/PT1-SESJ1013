@@ -14,21 +14,21 @@ int main() {
     int originalSum = sum; 
 
     cout << "The sum of digits is: " << originalSum <<endl;
-    cout << originalSum << " is ";
 
-    if (originalSum % 3 == 0) {
-        
-        cout << "a multiple of 3";}
+    if (sum % 2 == 0) {
+        cout << sum << " is even number" << endl;
+    } else {
+        cout << sum << " is odd number" << endl;
+    }
     
     if (originalSum % 4 == 0) {
-        cout << "a multiple of 4";
+        cout << "a multiple of 4"<<endl;
     }
     
     if (originalSum % 5 == 0) {
-        cout << "a multiple of 5";
+        cout << "a multiple of 5"<<endl;
     }
-
-   cout << endl;
+ cout << endl;
 
     system("pause");
     return 0;
