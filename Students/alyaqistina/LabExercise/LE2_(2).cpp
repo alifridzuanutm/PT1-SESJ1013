@@ -26,7 +26,7 @@ if (sum%2==0 && sum%4==0 && sum%5==0){
     cout << sum << " is even number & multiples of 4 and 5";
 }
 else if (sum%2!=0 && sum%4==0 && sum%5==0){
-    cout << sum << "is odd number & multiples of 4 and 5";
+    cout << sum << " is odd number & multiples of 4 and 5";
 }
 else if (sum%2==0 && sum%5==0){
      cout << sum << " is even number & multiples of 5";
@@ -38,13 +38,13 @@ else if (sum%2!=0 && sum%4==0){
     cout << sum << "is odd number & multiples of 4";
 }
 else if (sum%2!=0 && sum%5==0){
-     cout << sum << "is odd number & multiples of 5";
+     cout << sum << " is odd number & multiples of 5";
 }
 else if (sum%2==0 && sum%4!=0 && sum%5!=0){
-    cout << sum << "is even number";
+    cout << sum << " is even number";
 }
 else if (sum%2!=0 && sum%4!=0 && sum%5!=0){
-    cout << sum << "is odd number";
+    cout << sum << " is odd number";
 }
     
 
