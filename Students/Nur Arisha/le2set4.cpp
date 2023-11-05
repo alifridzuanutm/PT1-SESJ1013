@@ -10,6 +10,7 @@ int main()
     cout << "Enter an integer number: ";
     cin >> num;
 
+//post-test loop
  do{
         digit = num % 10; //fnd the remainder
         num = num / 10; //find the remaining integer
