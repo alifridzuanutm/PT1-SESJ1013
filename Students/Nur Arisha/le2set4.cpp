@@ -14,7 +14,9 @@ int main()
  do{
         digit = num % 10; //fnd the remainder
         num = num / 10; //find the remaining integer
-        cout << digit << " * ";
+        cout << digit;
+        if(num>0)
+        cout << " * ";
         prod *= digit; //find product of digits
     }while(num!=0);  
 

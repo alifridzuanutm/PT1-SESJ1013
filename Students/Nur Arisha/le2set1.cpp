@@ -14,7 +14,9 @@ int main()
  do{
         digit = num % 10; //find remainder
         num = num / 10; //use division to find the remaining number
-        cout << digit << " + ";
+        cout << digit;
+        if(num>0)
+        cout << " + ";
         sum += digit;
     }while(num!=0);
 
