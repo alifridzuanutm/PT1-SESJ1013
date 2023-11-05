@@ -4,48 +4,49 @@ using namespace std;
 int main()
 {
     int num, digit, mul;
-    int sum = 0;
+    int prod = 1;
 
 //user input of integer
     cout << "Enter an integer number: ";
     cin >> num;
 
-//pre-test loop
- while(num!=0){
+//post-test loop
+ do{
         digit = num % 10; //fnd the remainder
         num = num / 10; //find the remaining integer
         cout << digit;
         if(num>0)
-        cout << " + ";
-        sum += digit;
-    }
+        cout << " * ";
+        prod *= digit; //find product of digits
+    }while(num!=0);  
 
+      cout << " = " << prod << endl;
 
-    cout << " = " << sum << endl;
-
-    //identify even number
-    if(sum%2==0) 
-        cout << sum << " is an even number ";
+      //identify even number
+    if(prod%2==0)
+        cout << prod << " is an even number ";
     else
-        cout << sum << " is an odd number "; //for odd number
+        cout << prod << " is an odd number ";
 
-    //identify multiply of 4 and/or 5
-    if((sum%4==0) && (sum%5==0))
+
+   //identify multiples of 3 and/or 5
+    if((prod%3==0) && (prod%5==0))
     {
         cout << "& is a multiples of ";
-        cout << "4 and 5";
+        cout << "3 and 5";
     }
-    else if(sum%5==0)
+    else if(prod%3==0)
+    {
+        cout << "& is a multiples of ";
+        cout << "3";
+    }
+    else if(prod%5==0)
     {
         cout << "& is a multiples of ";
         cout << "5";
     }
-    else if(sum%4==0)
-    {
-        cout << "& is a multiples of ";
-        cout << "4";
-    }
-    
+
+
 
     return 0;
 
