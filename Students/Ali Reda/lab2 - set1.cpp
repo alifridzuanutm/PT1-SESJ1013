@@ -6,18 +6,17 @@ int main() {
   int number;
   int sumOfDigits = 0;
 
-  // Read an integer number
+
   cout << "Enter an integer number: ";
   cin >> number;
 
-  // Calculate the sum of digits
+
   while (number > 0) {
     int digit = number % 10;
     sumOfDigits += digit;
     number /= 10;
   }
 
-  // Identify whether the sum of digits is a multiple of 3, 4, and/or 5
   cout << sumOfDigits << " ";
 
   if (sumOfDigits % 3 == 0) {
