@@ -32,16 +32,16 @@ int main(){
 	else{
 			cout<<multiply<<"is odd number";
 	}
-;
+
 	
-	if(multiply%3==0){
-		cout<<"& multiples of 3";
+	if(multiply%5==0&&multiply%3==0){
+		cout<<"& multiples of 3 and 5";
 	}
 	else if(multiply%5==0){
 		cout<<"& multiples of 5";
 	}
-	else if(multiply%5==0&&multiply%3==0){
-		cout<<"& multiples of 3 and 5";
+	else if(multiply%3==0){
+		cout<<"& multiples of 3 ";
 
 		
 	}
