@@ -3,38 +3,50 @@ using namespace std;
 
 int main() {
     int n;
-    int multiple = 1;
+    int multiply = 1,rem;
 
     cout << "Enter an integer number: ";
     cin >> n;
 
-    int m = n;
-
-    
-    cout << n << " = ";
-    while (m > 0) {
-        int rem = m % 10;
-        multiple *= rem;
+   
+    while (n >0) {
+        rem = n % 10;
         cout << rem;
-        m = m / 10;
-        if (m > 0) {
-            cout << " * ";
+        n = n / 10;
+        multiply *= rem;
+        if (n !=0) {
+            cout << " * ";}
+        else{
+		
+         cout << " = " <<multiply<<endl;
+       
         }
+        
     }
+     cout <<multiply<<" is multiples of " ;
 
-    cout << " = " << multiple << endl;
-
-    
-        if (multiple % 4 == 0) {
-            cout <<multiple<<"is  multiple of 4"<<endl;
+        if (multiply % 4 == 0  && multiply % 5 == 0 && multiply % 7 == 0) {
+            cout <<"4,5 and7"<<endl;
         }
-        if (multiple % 5 == 0) {
-            cout <<multiple<<"is  multiple of 5"<<endl;
+        else if (multiply % 4 == 0  && multiply % 5 == 0 ) {
+            cout <<"4 and 5"<<endl;
         }
-        if (multiple % 7 == 0) {
-            cout << multiple<<"is  multiple of 7"<<endl;
+        else if (multiply % 4 == 0  && multiply % 7 == 0 ) {
+            cout <<"4 and 7"<<endl;
         }
-        cout << endl;
+        else if (multiply % 5 == 0  && multiply % 7 == 0 ) {
+            cout <<"5 and 7"<<endl;
+        }
+        else if (multiply % 4 == 0   ) {
+            cout <<"4 "<<endl;
+        }
+        else if (multiply % 5 == 0   ) {
+            cout <<"5 "<<endl;
+        }
+        else if (multiply % 7 == 0   ) {
+            cout <<"7 "<<endl;
+        }
+        
    
 
     return 0;

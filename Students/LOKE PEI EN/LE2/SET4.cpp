@@ -3,7 +3,7 @@ using namespace std;
 int main(){
 
 	int n;
-	int rem,multiply=1;
+	int multiply=1,rem;
 	
 	cout<<"Enter an integer number:";
 	cin>>n;
@@ -13,35 +13,33 @@ int main(){
 		cout<<rem;
 		
 		n=n/10;
-		if(n!=0)
-	    cout<<"*";
+		if(n!=0){
+	    cout<<" * ";
+		multiply*=rem;}
 		
-		multiply*=rem;
+		else{
+		cout<<" = "<<multiply<<endl;}
 		
-		
-	}while(n!=0);
+	}while(n>0);
 
-		cout<<"="<<multiply<<endl;
-			
-	
-	
+		
 	if (multiply%2==0){
-	cout<<multiply<<"is even number";
-}
-	
+	cout<<multiply<<" is even number";
+    }	
 	else{
-			cout<<multiply<<"is odd number";
+			cout<<multiply<<" is odd number";
 	}
 
+	cout<<" & multiples of";
 	
 	if(multiply%5==0&&multiply%3==0){
-		cout<<"& multiples of 3 and 5";
+		cout<<"  3 and 5";
 	}
 	else if(multiply%5==0){
-		cout<<"& multiples of 5";
+		cout<<"  5";
 	}
 	else if(multiply%3==0){
-		cout<<"& multiples of 3 ";
+		cout<<"  3 ";
 
 		
 	}
