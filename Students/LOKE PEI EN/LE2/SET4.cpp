@@ -11,16 +11,18 @@ int main(){
 	do{
 		rem=n%10;
 		cout<<rem;
-		
 		n=n/10;
+		multiply*=rem;
 		if(n!=0){
 	    cout<<" * ";
-		multiply*=rem;}
+		}
 		
 		else{
 		cout<<" = "<<multiply<<endl;}
 		
 	}while(n>0);
+	
+
 
 		
 	if (multiply%2==0){
@@ -30,21 +32,24 @@ int main(){
 			cout<<multiply<<" is odd number";
 	}
 
-	cout<<" & multiples of";
 	
-	if(multiply%5==0&&multiply%3==0){
-		cout<<"  3 and 5";
+	
+	if(multiply%3==0 && multiply%5==0){
+		cout<<" & multiples of 3 and 5";
 	}
 	else if(multiply%5==0){
-		cout<<"  5";
+		cout<<" & multiples of 5";
 	}
 	else if(multiply%3==0){
-		cout<<"  3 ";
+		cout<<" & multiples of 3 ";}
+	else{
+		cout<<".";
+	}
 
 		
 	}
 		
-	}
+	
 	
 	
 
