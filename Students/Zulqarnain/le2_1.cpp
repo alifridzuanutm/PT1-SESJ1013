@@ -20,33 +20,27 @@ int main(){
     }while(num!=0);
 
     cout<<" = "<<total;
-    num=total;
-
-    if(num%3==0 && num%4==0 && num%5==0){
+    if(total%3==0 && total%4==0 && total%5==0){
         cout<<"\n"<<total << " is multiples of 3,4 and 5";
     }
-    else if (num%3==0 && num%4==0){
+    else if (total%3==0 && total%4==0){
         cout<<"\n"<<total << " is multiples of 3 and 4";
     }
-    else if (num%3==0 && num%5==0){
+    else if (total%3==0 && total%5==0){
         cout<<"\n"<<total << " is multiples of 3 and 5";
     }
-    else if (num%4==0 && num%5==0){
+    else if (total%4==0 && total%5==0){
         cout<<"\n"<<total << " is multiples of 4 and 5";
     }
-    else if(num%3==0){
+    else if(total%3==0){
         cout<<"\n"<<total << " is multiples of 3";
     }
-    else if(num%4==0){
+    else if(total%4==0){
         cout<<"\n"<<total << " is multiples of 4";
     }
-    else if(num%5==0){
+    else if(total%5==0){
         cout<<"\n"<<total << " is multiples of 5";
     }
-    else{
-        cout<<"\n"<<total<<" have no multiples";
-    }
-
 
     return 0;
 }
