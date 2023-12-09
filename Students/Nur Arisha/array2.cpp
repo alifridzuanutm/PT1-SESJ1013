@@ -6,7 +6,7 @@ int small(int[], int); //function header
 int main()
 {
     const int size = 8; //declare size of array
-    int numbers[size] = {1, 2, -4, 5, 1, 100, 2, 22}; //elements of array
+    int numbers[size] = {1, 2, 4, 5, 10, 100, 2, -22}; //elements of array
 
     cout << "Index of the smallest element in the array is " << small(numbers, size); //function call
 }
