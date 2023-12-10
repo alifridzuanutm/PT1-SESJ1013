@@ -12,7 +12,7 @@
 using namespace std;
 
 int average(int array[], int size);
-double average(int array[], int size);
+double average(double array[], int size);
 
 int main (){
 
@@ -21,7 +21,7 @@ int main (){
     double arrayDouble [] = {6.0,4.4,1.9,2.9,3.4,3.5};
 
     cout<<"Average for int is"<<average(array,size)<<endl;
-    cout<<"Average for double is"<<average(arrayDouble,size)endl;
+    cout<<"Average for double is"<<average(arrayDouble,size)<<endl;
     
     return 0;
 }
@@ -32,16 +32,14 @@ int average(int array[], int size){
     for (int i=0;i<size;i++){
         sum=sum+array[i];
     }
-    y=sum/size;
-    return y;
+    return sum/size;
 }
 
 double average(double arrayDouble[], int size){
 
     double sum = 0;
     for (int i=0;i<size;i++){
-        sum=sum+array[i];
+        sum=sum+arrayDouble[i];
     }
-    x=sum/size;
-    return x;
+    return sum/size;
 }
