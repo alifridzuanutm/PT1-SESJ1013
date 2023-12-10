@@ -1,17 +1,20 @@
 #include <iostream>
 using namespace std;
-int main() {
-    
+
+    int average(int array[], int size);
+double average(double array[], int size);
+
+    int main() {
     int intArray[] = {1, 2, 3, 4, 5, 6};
     double doubleArray[] = {6.0, 4.4, 1.9, 2.9, 3.4, 3.5};
 
     int intArraySize = sizeof(intArray) / sizeof(int);
     int intArrayAvg = average(intArray, intArraySize);
-    cout << "Average of integer array: " << intArrayAvg << std::endl;
+    cout << "Average of integer array: " << intArrayAvg << endl;
 
     int doubleArraySize = sizeof(doubleArray) / sizeof(double);
     double doubleArrayAvg = average(doubleArray, doubleArraySize);
-    cout << "Average of double array: " << doubleArrayAvg << std::endl;
+    cout << "Average of double array: " << doubleArrayAvg << endl;
 
     return 0;
 }
@@ -32,8 +35,6 @@ double average(double array[], int size) {
     return sum / size;
 }
 
-int average(int array[], int size);
-double average(double array[], int size);
 
 
 
