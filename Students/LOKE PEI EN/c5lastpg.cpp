@@ -1,16 +1,34 @@
 #include <iostream>
 using namespace std;
 
-const int NUM_COUNTRIES = 5;
+const int NUM_COUNTRIES = 4;
 const int NUM_MEDALS = 3;
 
 string countries[NUM_COUNTRIES]={"Country 1","Country 2","Country 3","Country 4"};
-    int medals[4][3]={
-        {129,257,590},
-        {120,279,394},
-        {115,290,123},
-        {98,209,112},
-    };
+    int medals[4][3];
+
+void readInput(){
+	cout<<"Enter the number of medals for each country:"<<endl;
+      for(int i=0;i<4;i++){
+           	cout << countries[i]<<"(Gold Silver Bronze):";
+      for(int j=0;j<3;j++){
+            cin >>medals[i][j] ;}
+}
+}
+
+void displayMedals()
+{
+    cout << " \t \tGold\tSilver\tBronze" << endl;
+    for (int i = 0; i < NUM_COUNTRIES; i++)
+    {
+        cout << countries[i] << "\t";
+        for (int j = 0; j < NUM_MEDALS; j++)
+        {
+            cout << medals[i][j] << "\t";
+        }
+        cout << endl;
+    }
+}     
             
 void firstFunction(){
 	int total=0;
@@ -52,15 +70,11 @@ void fourthFunction(){
 }
 
     
-int main (){	
-    cout << " \t \tGold\tSilver\tBronze" << endl;
-      for(int i=0;i<4;i++){
-           	cout << countries[i]<<"\t";
-      for(int j=0;j<3;j++){
-            cout <<medals[i][j] << "\t";
-              }
-              cout<<endl;     
-    }
+int main (){
+	readInput();
+
+    displayMedals();	
+   
     firstFunction();
   
     secondFunction();
