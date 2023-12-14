@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-const int NUM_COUNTRIES = 4;
+const int NUM_COUNTRIES = 5;
 const int NUM_MEDALS = 3;
 
 string countries[NUM_COUNTRIES]={"Country 1","Country 2","Country 3","Country 4"};
