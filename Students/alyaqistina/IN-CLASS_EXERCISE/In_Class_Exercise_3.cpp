@@ -1,7 +1,7 @@
 /*                     -------IN CLASS EXERCISE PG 81, CHP 5--------
 14 DECEMBER 2023
 Write a complete program that stores the following number of medal
-collection for 4 countries into the 2-D array called medals.
+collection for 5 countries into the 2-D array called medals.
           Gold Silver Bronze
 Country 1 129   257     590
 Country 2 120   279     394
@@ -22,10 +22,7 @@ store them inside the medals array.
 using namespace std;
 
 
-
-
-
-    const int row = 4, column = 3;
+    const int row = 5, column = 3;
     const char Typemedal[][10]={"Gold","Silver","Bronze"};
 
      void inputMedal(int medal[row][column]){
@@ -44,7 +41,7 @@ using namespace std;
 
 int NumMedalC3 (int medal[row][column]){
 
-    int MedallC3 = 0;
+    int MedalC3 = 0;
 
     for (int i = 0; i < column; i++){
         MedalC3 += medal[2][i];
@@ -72,7 +69,7 @@ int SmallestMedal (int medal [row][column]){
     int SmallestMedal = medal[0][0];
 
     for (int i = 0; i<row; i++){
-        for int j = 0; j < column; j++){
+        for (int j = 0; j < column; j++){
             if((medal[i][j]) > (medal[0][0])){
                 SmallestMedal = medal[i][j];
             }
@@ -86,7 +83,7 @@ int highestGold (int medal[row][column]){
     int highestGold = medal[0][0];
 
     for (int i = 0; i < row; i++){
-        if ((medal[i][0]) > (medal[0][0]){
+        if ((medal[i][0]) > (medal[0][0])){
             highestGold = medal[i][0];
         }
     } return highestGold;
@@ -96,8 +93,8 @@ int highestGold (int medal[row][column]){
 int TotalBronze (int medal[row][column]){
 
     int TotalBronze = 0;
-    
-    for(int = i; i < row; i++){
+
+    for(int i = 0; i < row; i++){
         TotalBronze += medal [i][2];
     } return TotalBronze;
 }
