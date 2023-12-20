@@ -1,4 +1,4 @@
-/*IN CLASS EXERCISE PG 81, CHP 5
+/*                     -------IN CLASS EXERCISE PG 81, CHP 5--------
 14 DECEMBER 2023
 Write a complete program that stores the following number of medal
 collection for 4 countries into the 2-D array called medals.
@@ -96,6 +96,7 @@ int highestGold (int medal[row][column]){
 int TotalBronze (int medal[row][column]){
 
     int TotalBronze = 0;
+    
     for(int = i; i < row; i++){
         TotalBronze += medal [i][2];
     } return TotalBronze;
