@@ -19,7 +19,6 @@ int main() {
     avrgArray2 = average(array2,size);
     cout << "Average for array with double type number: " << avrgArray2 <<endl;
   
-
     return 0;
 }
 
@@ -30,8 +29,8 @@ int average(int array[], int size){
     for (i=0; i<size; i++){
         sum += array[i];
     }
-    return sum/size;
     
+    return sum/size;
 }
 
 double average(double array[], int size){
