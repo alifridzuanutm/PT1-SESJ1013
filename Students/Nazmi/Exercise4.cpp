@@ -14,7 +14,8 @@ int main() {
     //average for array1
     avrgArray1 = average(array1,size);
     cout << "Average for array with integer type number: " << avrgArray1 << endl;
-    
+
+    //average for array2
     avrgArray2 = average(array2,size);
     cout << "Average for array with double type number: " << avrgArray2 <<endl;
   
