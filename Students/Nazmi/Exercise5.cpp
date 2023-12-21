@@ -3,8 +3,7 @@ int findSmallest(int array[], int size);
 
 using namespace std;
 
-int main()
-{
+int main(){
     int array[] = {1, 2, 4, 5, 10, 100, 2, -22};
     int size;
     
