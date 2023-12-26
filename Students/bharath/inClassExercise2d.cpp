@@ -59,7 +59,7 @@ void country3Medals(int medals[][COLS], int rows, int numCountry){
             total+= medals[2][col];
         }
     
-    cout<< " The number of medals won by Country 3 is : "<< total<<endl;
+    cout<< " The number of medals won by Country 3 is: "<< total<<endl;
 }
 
 void largestMedals(int medals[][COLS], int rows, int largest){
@@ -70,7 +70,7 @@ void largestMedals(int medals[][COLS], int rows, int largest){
             }
         }
     }
-    cout<< " The largest number of medals won is : "<<largest<<endl;
+    cout<< " The largest number of medals won is: "<<largest<<endl;
 }
 
 void smallestMedals(int medals[][COLS], int rows, int smallest){
@@ -80,7 +80,7 @@ void smallestMedals(int medals[][COLS], int rows, int smallest){
             smallest=medals[row][col];
         }
     }
-    cout<<" The smallest number of medal won is : "<<smallest<<endl;
+    cout<<" The smallest number of medals won is: "<<smallest<<endl;
 }
 
 void highestGoldMedal(int medals[][COLS],int rows, int typeMedals,int highest){
@@ -89,7 +89,7 @@ void highestGoldMedal(int medals[][COLS],int rows, int typeMedals,int highest){
        highest=medals[row][0];
        }
     }
-    cout<<" The highest number of Gold medal won : "<<highest<<endl;
+    cout<<" The highest number of Gold medal won: "<<highest<<endl;
 }
 
 void totalBronzeMedal(int medals[][COLS],int rows, int numMedals){
@@ -97,5 +97,5 @@ void totalBronzeMedal(int medals[][COLS],int rows, int numMedals){
     for(int row=0;row<rows;row++){
         total +=medals[row][2];
     }
-    cout<<" The total number of bronze medal is :"<<total<<endl;
+    cout<<" The total number of bronze medals is:"<<total<<endl;
 }
