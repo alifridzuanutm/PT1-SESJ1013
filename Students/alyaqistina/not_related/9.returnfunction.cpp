@@ -39,10 +39,6 @@ int getMin(int n1, int n2)
 
 }
 
-string DayName(int DayNumb)
-{
-    
-}
 
 int main()
 {

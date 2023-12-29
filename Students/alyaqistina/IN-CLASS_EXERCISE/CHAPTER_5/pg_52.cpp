@@ -28,7 +28,7 @@ int main()
     }
 
     cout << "The average of those numbers is ";
-    cout << avgArray(userNums, SIZE) << endl;        // Output for average using calling function
+    cout << avgArray(userNums, SIZE) << endl;        // Output for average using calling function and arguments
 
 
     return 0;
