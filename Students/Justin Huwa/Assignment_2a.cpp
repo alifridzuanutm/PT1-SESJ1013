@@ -33,8 +33,7 @@ int main()
 		bmr = 447.593 + (9.247*weight) + (3.098*height) - (4.330*age);
 		cout<<"BMR= "<<bmr<<" calories per day"<<endl;
 	}
-	
-	bmr1 = bmr*1.2;
+    bmr1 = bmr*1.2;
     bmr2 = bmr*1.375;
     bmr3 = bmr*1.465;
     bmr4 = bmr*1.55;
