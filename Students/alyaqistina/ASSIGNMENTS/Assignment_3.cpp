@@ -84,7 +84,13 @@ int main()
 //TASK 1:
 int getInput(string u[], int t[], int e[], int o[])
 {
-    
+    ofstream MyFile("input.txt");
+
+  // Write to the file
+  MyFile << "UM 8093 27452 6328 USM 7718 30853 6743 UKM 8109 27239 4765 UPM 8706 30670 7082 UTM 7328 31066 6997 UUM 7254 29143 6709 UIAM 10366 31526 5460 UniMAS 5578 16962 4579 UMS 5041 18531 4064 UPSI 5665 21587 11807 UiTM 65207 174755 38576 UniSZA 3523 9947 2400 UMT 3346 10665 2317 USIM 3675 14781 893 UTHM 4847 16436 4362 UTeM 3148 12370 2428 UMP 2838 9909 2122 UniMAP 4053 13769 2452 UMK 2291 9882 1062 UPNM 1341 3095 1308";
+
+  // Close the file
+  MyFile.close();
     ifstream file("input.txt");
 
     if(!file){
@@ -121,51 +127,71 @@ void calTotal(int t[], int e[], int o[], int total, int &sumI, int &sumE, int &s
 //TASK 3:
 void getLowest(int t[], int e[], int o[], int total, int &lowI, int &lowE, int &lowO)
 {
-    int lowest = 999999;
+    int indext = t[0];
+    int indexe = e[0];
+    int indexo = o[0];
 
-    for(int i = 0; i < total; i++)
+    for(int i = 1; i < total; i++)
     {
-        if(t[i] < lowest){
-            lowest = t[i];
+        if(t[i] < indext){
+            indext = t[i];
             lowI = i;
         }
-
-        if(e[i] < lowest){
-            lowest = e[i];
-            lowE = i;
-        }
-
-        if(o[i] < lowest){
-            lowest = o[i];
-            lowO = i;
+    }
+    
+    for(int j = 1; j < total; j++)
+    {
+        if(e[j] < indexe){
+            indexe = e[j];
+            lowE = j;
         }
     }
+     for(int k = 1; k < total; k++)
+    {
+        if(o[k] < indexo){
+            indexo = o[k];
+            lowO = k;
+        }
+    }
+
+
 }
 
 
 //TASK 4:
 void getHighest(int t[], int e[], int o[], int total, int &highI, int &highE, int &highO)
 {
-    int highest = -9999999;
+    int indext = t[0];
+    int indexe = e[0];
+    int indexo = o[0];
 
-    for(int j = 0; j < total; j++)
+    for(int i = 1; i < total; i++)
     {
-        if(t[j] > highest){
-            highest = t[j];
-            highI = j;
-        }
-
-        if(e[j] > highest){
-            highest = e[j];
-            highE = j;
-        }
-
-        if(o[j] > highest){
-            highest = o[j];
-            highO = j;
+        if(t[i] > indext){
+            indext = t[i];
+            highI = i;
         }
     }
+    
+    for(int j = 1; j < total; j++)
+    {
+        if(e[j] > indexe){
+            indexe = e[j];
+            highE = j;
+        }
+    }
+    
+    
+    for(int k = 1; k < total; k++)
+    {
+        if(o[k] > indexo){
+            indexo = o[k];
+            highO = k;
+       }
+    }
+
 }
+
 
 
 
