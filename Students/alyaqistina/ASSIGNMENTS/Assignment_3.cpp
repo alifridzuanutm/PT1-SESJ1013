@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <fstream>
-
+#include <iomanip>
 
 using namespace std;
 
@@ -52,7 +52,8 @@ int main()
 
     cout << "\t  TOTAL\t\t" << sumI << "\t\t" << sumE << "\t\t" << sumO << "\n";
 
-    cout << "\t  AVERAGE\t" << sumI/total << "\t\t" << sumE/total << "\t\t" << sumO/total <<"\n";
+
+    cout << "\t  AVERAGE\t" << setprecision(-2) << (double)sumI/total << "\t\t" << (double)sumE/total << "\t\t" << (double)sumO/total <<"\n";
 
     cout << "-------------------------------------------------------------------------\n";
     cout << "\n";
@@ -165,6 +166,7 @@ void getHighest(int t[], int e[], int o[], int total, int &highI, int &highE, in
         }
     }
 }
+
 
 
 
