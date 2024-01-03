@@ -8,7 +8,7 @@ void calTotalAverage(int [][3],int );
 int getLowest(int [][3],int ,int );
 int getHighest(int [][3],int ,int );
 void printOutput(string [],int [][3],int );
-void printOutput2(string [],int [][3],int [],int [],int );
+void printOutput2(string [],int [][3],int [],int []);
 
 int main(){
     const int NUM_ROW = 40;
@@ -135,7 +135,7 @@ void calTotalAverage(int UNI_DATA[][3],int i){
     outFile<<"\n---------------------------------------------------------------"<<endl;
     outFile.close();
 }
-void printOutput2(string UNI[],int UNI_DATA[][3],int lowest[],int highest[],int i){
+void printOutput2(string UNI[],int UNI_DATA[][3],int lowest[],int highest[]){
     int range[3];
     string lowUni[3],highUni[3];
     for(int j=0;j<3;j++){
