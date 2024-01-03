@@ -2,7 +2,6 @@
 #define row 4
 #define col 3
 
-//function declaration
 int country3(int medal[row][col]);
 int biggest(int a[row][col]);
 int smallest(int a[row][col]);
@@ -15,7 +14,6 @@ int main()
 {
     int medal[row][col];
     
-    //user input number of medals for each country
     for (int i = 0; i < row; i++)
     {
     cout << "Enter number of medals for Country " << i+1 << endl;
@@ -27,18 +25,16 @@ int main()
     cin >> medal[i][2];
     }
 
-    //function call
     cout << "Total number of medals won by Country 3 is " << country3(medal) << endl;
-    cout << "Biggest number of medals won is " << biggest(medal) << endl;
+    cout << "Largest number of medals won is " << biggest(medal) << endl;
     cout << "Smallest number of medals won is " << smallest(medal) << endl;
-    cout << "Highest number of gold medals won is " << highest_gold(medal) << endl;
-    cout << "Total number of bronze medals won is " << total_bronze(medal) << endl;
+    cout << "Highest number of gold medal won is " << highest_gold(medal) << endl;
+    cout << "Total number of bronze medal won is " << total_bronze(medal) << endl;
 
 
 return 0;
 }
 
-//function definition
 int country3 (int medal[row][col])
 {
     int sum = 0;
@@ -50,7 +46,6 @@ int country3 (int medal[row][col])
     return sum;
 }
 
-
 int biggest (int medal[row][col])
 {
     int index = medal[0][0];
@@ -59,8 +54,10 @@ int biggest (int medal[row][col])
     {
         for (int j = 0; j < col; j++)
         {
-            if (medal[j][i] > index)
-            big = medal[j][i];
+            if (medal[i][j] > index)
+            big = medal[i][j];
+                else 
+                big = index;
         }
     }
 
@@ -75,8 +72,10 @@ int smallest (int medal[row][col])
     {
         for (int j = 0; j < col; j++)
         {
-            if (medal[j][i] < index)
-            small = medal[j][i];
+            if (medal[i][j] < index)
+            small = medal[i][j];
+                else 
+                small = index;
         }
     }
 
@@ -91,6 +90,8 @@ int highest_gold (int medal[row][col])
     {
         if (medal[i][0] > index)
         high = medal[i][0];
+            else
+            high = index;
     }
 
     return high;
