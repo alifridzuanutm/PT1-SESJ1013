@@ -3,12 +3,12 @@
 #include <iomanip>
 
 using namespace std;
-int getInput(string UNI[], int UNI_DATA[][3]);
-void calTotalAverage(int UNI_DATA[][3],int i);
-int getLowest(int UNI_DATA[][3],int i,int j);
-int getHighest(int UNI_DATA[][3],int i,int j);
-void printOutput(string UNI[],int UNI_DATA[][3],int i);
-void printOutput2(string UNI[],int UNI_DATA[][3],int lowest[],int highest[],int i);
+int getInput(string [], int [][3]);
+void calTotalAverage(int [][3],int );
+int getLowest(int [][3],int ,int );
+int getHighest(int [][3],int ,int );
+void printOutput(string [],int [][3],int );
+void printOutput2(string [],int [][3],int [],int [],int );
 
 int main(){
     const int NUM_ROW = 40;
@@ -150,10 +150,10 @@ void printOutput2(string UNI[],int UNI_DATA[][3],int lowest[],int highest[],int 
     outFile<<left;
     outFile<<setw(42)<<"THE LOWEST NUMBER OF STUDENTS' INTAKE"<<"= "<<lowest[0]<<"("<<lowUni[0]<<")"<<endl;
     outFile<<setw(42)<<"THE LOWEST NUMBER OF STUDENTS' ENROLMENT"<<"= "<<lowest[1]<<"("<<lowUni[1]<<")"<<endl;
-    outFile<<setw(42)<<"THE LOWEST NUMBER OF STUDENTS' OUTPUT"<<"= "<<lowest[2]<<"("<<lowUni[0]<<")"<<endl<<endl;
+    outFile<<setw(42)<<"THE LOWEST NUMBER OF STUDENTS' OUTPUT"<<"= "<<lowest[2]<<"("<<lowUni[2]<<")"<<endl<<endl;
     outFile<<setw(43)<<"THE HIGHEST NUMBER OF STUDENTS' INTAKE"<<"= "<<highest[0]<<"("<<highUni[0]<<")"<<endl;
-    outFile<<setw(43)<<"THE HIGHEST NUMBER OF STUDENTS' ENROLMENT"<<"= "<<highest[1]<<"("<<highUni[0]<<")"<<endl;
-    outFile<<setw(43)<<"THE HIGHEST NUMBER OF STUDENTS' OUTPUT"<<"= "<<highest[2]<<"("<<highUni[0]<<")"<<endl<<endl;
+    outFile<<setw(43)<<"THE HIGHEST NUMBER OF STUDENTS' ENROLMENT"<<"= "<<highest[1]<<"("<<highUni[1]<<")"<<endl;
+    outFile<<setw(43)<<"THE HIGHEST NUMBER OF STUDENTS' OUTPUT"<<"= "<<highest[2]<<"("<<highUni[2]<<")"<<endl<<endl;
     outFile<<setw(44)<<"THE RANGE OF NUMBER OF STUDENTS' INTAKE"<<"= "<<range[0]<<endl;
     outFile<<setw(44)<<"THE RANGE OF NUMBER OF STUDENTS' ENROLMENT"<<"= "<<range[1]<<endl;
     outFile<<setw(44)<<"THE RANGE OF NUMBER OF STUDENTS' OUTPUT"<<"= "<<range[2]<<endl<<endl;
