@@ -37,7 +37,7 @@ int getInput(string UNI[],int UNI_DATA[][3]){
 
     if (!inFile.is_open()) {
         cerr << "Error opening the file!" << endl;
-        return 1;  // Return an error code
+        exit(1);   //return error if file can't be opened
     }
 
     for(int i=0;i<30;i++){//fetching file data
@@ -48,6 +48,7 @@ int getInput(string UNI[],int UNI_DATA[][3]){
             inFile >> UNI_DATA[i][j];
         }
     }
+    inFile.close();
     return 0;
 }
 int getLowest(int UNI_DATA[][3],int i,int j){
