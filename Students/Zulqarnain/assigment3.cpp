@@ -1,8 +1,20 @@
+// Name: MUHAMMAD NAZMI BIN MOHD SAIFULIZAM
+// Matric No.: A23CS0135
+// Section: 04
+// Date : 3/1/2023
+
+// Name: MUHAMMAD ZULQARNAIN BIN ALI
+// Matric No.: A23CS0139
+// Section: 04
+// Date : 3/1/2023
+
 #include <iostream>
 #include <fstream>
 #include <iomanip>
 
 using namespace std;
+
+//function prototype
 int getInput(string [], int [][3]);
 void calTotalAverage(int [][3],int );
 int getLowest(int [][3],int ,int );
@@ -11,6 +23,7 @@ void printOutput(string [],int [][3],int );
 void printOutput2(string [],int [][3],int [],int []);
 
 int main(){
+    //making array and declare variables
     const int NUM_ROW = 40;
     const int NUM_COL = 3;
     string UNI[NUM_ROW];
@@ -18,16 +31,17 @@ int main(){
 
     cout<<"READING FILE..."<<endl;
     i = getInput(UNI,UNI_DATA);
-
+    
     cout<<"UPDATING OUTPUT FILE...";
     printOutput(UNI,UNI_DATA,i);
 
+    //finding lowest and highest
     for(int j=0;j<3;j++){
         lowest[j]=getLowest(UNI_DATA ,i,j);
         highest[j]=getHighest(UNI_DATA ,i,j);
     }
     calTotalAverage(UNI_DATA,i);
-    printOutput2(UNI,UNI_DATA,lowest,highest,i);
+    printOutput2(UNI,UNI_DATA,lowest,highest);
 
     return 0;
 }
@@ -37,7 +51,7 @@ int getInput(string UNI[],int UNI_DATA[][3]){
 
     if (!inFile.is_open()) {
         cerr << "Error opening the file!" << endl;
-        exit(1);   //return error if file can't be opened
+        return 1;   //return error if file can't be opened
     }
 
     for(int i=0;i<30;i++){//fetching file data
@@ -82,6 +96,7 @@ void printOutput(string UNI[],int UNI_DATA[][3],int i){
     outFile<<left;
     outFile<<setw(23)<<"  UNIVERSITY"<<setw(16)<<"INTAKE"<<setw(16)<<"ENROLMENT"<<setw(16)<<"OUTPUT"<<endl;
     outFile<<"---------------------------------------------------------------"<<endl;
+    //print data from getInput function
     for(int j=0;j<i;j++){
         outFile<<left;
         outFile<<setw(12)<<UNI[j];
@@ -105,6 +120,7 @@ void calTotalAverage(int UNI_DATA[][3],int i){
     outFile.open("output.txt",ios::app);
     outFile<<left;
     
+    //print total
     outFile<<setw(12)<<"TOTAL";
     outFile<<right;
     for(int j=0;j<3;j++){
@@ -120,6 +136,8 @@ void calTotalAverage(int UNI_DATA[][3],int i){
             outFile<<setw(17)<<total;
     }
     outFile<<left;
+
+    //print average
     outFile<<setw(12)<<"\nAVERAGE";
     outFile<<right;
     outFile<< fixed << setprecision(2);
@@ -138,6 +156,9 @@ void calTotalAverage(int UNI_DATA[][3],int i){
 void printOutput2(string UNI[],int UNI_DATA[][3],int lowest[],int highest[]){
     int range[3];
     string lowUni[3],highUni[3];
+
+    //setting the lowest and highest value based on index found
+    //get uni name for the lowest and highest
     for(int j=0;j<3;j++){
         lowUni[j]=UNI[lowest[j]];
         highUni[j]=UNI[highest[j]];

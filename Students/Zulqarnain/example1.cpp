@@ -1,13 +1,32 @@
 #include <iostream>
-#include <iomanip>
+#include <string>
+
 using namespace std;
-int main()
-{
-    int x = 1512;
-    int y = 7634;
-    cout << left;
-    cout << setw(5) << x << setw(7) << y << setw(8) << "Warm"<< endl;
-    cout << right;
-    cout << setw(5) << x << setw(7) << y << setw(8) << "Warm"<< endl;
+
+void setType(string &type) {      //1st mistake
+   // only exit the loop after user enter valid
+   // car type that are "sedan" or "mpv"
+   do {
+        cout << "\nEnter car type (sedan/mpv): ";
+        cin >> type;
+
+   } while (type.compare("sedan") && type.compare("mpv"));
+
+   cout << endl;
+}
+int main() {
+    // car type
+    string carType;
+
+    // car wash service package
+    int wsPkg;
+
+    // total service charge based on car type and
+    // wash service package
+    float totalCharge;
+
+    setType(carType);
+    cout<<carType;
+
     return 0;
 }
